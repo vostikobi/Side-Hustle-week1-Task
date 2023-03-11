@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+ 
+    </style>
+    <script type="text/javascript">
+        function Validate(inputText) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (inputText.value.match(mailformat)) {
+                alert("You have successfully submitted!");
+                document.Form.Email.focus();
+                return true;
+            }
+            else {
+                alert("You have entered an invalid email address!");
+                document.Form.Email.focus();
+                return false;
+            }
+        }
+        
+
+    </script>
+</head>
+
+<body>
+    <form name="Form" action="" method="" onsubmit=" Validate(document.Form.Email)">
+        <h3>
+            Sign Up.
+        </h3>
+        <fieldset style="border: width 400px heigth 600px;">
+            <legend style="font-weight: bold; margin: auto;">
+                Form
+            </legend>
+            <div>
+            <label for="Firstname">Firstname</label>
+            <input type="text" name="Firstname" id="Firstname" placeholder="Firstname" required>
+            <label for="Lastname">Lastname</label>
+            <input type="text" name="Lastname" id="Lastname" placeholder="Lastname" required>
+            </div>
+            <br>
+            <div>
+            <label for="Email">Email</label>
+            <input type="text" name="Email" id="Email" placeholder="Email" required>
+            <label for="Phonenumber">Phone number</label>
+            <input type="text" name="Phonenumber" id="Phonenumber" placeholder="Phonenumber" required>
+            </div>
+            <br>
+            <div>
+            <label for="Gender">Male</label>
+            <input type="radio" name="Male" id="Male">
+            <label for="Gender">Female</label>
+            <input type="radio" name="Female" id="Female">
+            </div>
+            <br>
+            <div>
+            <label for="Password">Password</label>
+            <input type="text" name="Password" id="Password" placeholder="password" required>
+            </div>
+            <br>
+            <button style="border-radius: 18px; cursor:pointer; background-color: aqua; color: black;">
+                Submit
+            </button>
+           
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
